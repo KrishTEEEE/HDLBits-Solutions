@@ -13,7 +13,7 @@ module top_module(
     always_ff @(posedge clk)begin
         if(load) q <= data;
         else begin
-            q <= ~q&r | ~l&r | q&~r;
+            q <= ~q&r | ~l&r | q&~r; // logic implemented by referencing hdlbits truth table and simplifying via a K-map
         end
     end
 
